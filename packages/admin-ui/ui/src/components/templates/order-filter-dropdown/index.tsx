@@ -5,9 +5,8 @@ import FilterDropdownContainer from "../../../components/molecules/filter-dropdo
 import FilterDropdownItem from "../../../components/molecules/filter-dropdown/item"
 import SaveFilterItem from "../../../components/molecules/filter-dropdown/save-field"
 import TabFilter from "../../../components/molecules/filter-tab"
-import PlusIcon from "../../fundamentals/icons/plus-icon"
-import FeatureToggle from "../../fundamentals/feature-toggle"
 import { useFeatureFlag } from "../../../providers/feature-flag-provider"
+import PlusIcon from "../../fundamentals/icons/plus-icon"
 
 const REGION_PAGE_SIZE = 10
 const CHANNEL_PAGE_SIZE = 10
@@ -150,13 +149,13 @@ const OrderFilters = ({
         triggerElement={
           <button
             className={clsx(
-              "rounded-rounded focus-visible:shadow-input focus-visible:border-violet-60 flex items-center space-x-1 focus-visible:outline-none"
+              "rounded-rounded focus-visible:shadow-input focus-visible:border-orange-60 flex items-center space-x-1 focus-visible:outline-none"
             )}
           >
             <div className="rounded-rounded bg-grey-5 border-grey-20 inter-small-semibold flex h-6 items-center border px-2">
               Filters
               <div className="text-grey-40 ml-1 flex items-center rounded">
-                <span className="text-violet-60 inter-small-semibold">
+                <span className="text-orange-60 inter-small-semibold">
                   {numberOfFilters ? numberOfFilters : "0"}
                 </span>
               </div>

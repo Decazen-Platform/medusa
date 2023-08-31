@@ -30,7 +30,7 @@ const useOrderTableColums = () => {
         Header: <div className="pl-2">Order</div>,
         accessor: "display_id",
         Cell: ({ cell: { value } }) => (
-          <p className="text-grey-90 group-hover:text-violet-60 min-w-[100px] pl-2">{`#${value}`}</p>
+          <p className="text-grey-90 group-hover:text-orange-60 min-w-[100px] pl-2">{`#${value}`}</p>
         ),
       },
       {

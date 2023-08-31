@@ -1,3 +1,4 @@
+import { useAdminGetSession } from "medusa-react"
 import React from "react"
 import { Route, Routes } from "react-router-dom"
 import SettingsCard from "../../components/atoms/settings-card"
@@ -24,12 +25,18 @@ import ReturnReasons from "./return-reasons"
 import Taxes from "./taxes"
 import Users from "./users"
 
+enum UserRoles {
+  ADMIN = "admin",
+  MEMBER = "member",
+}
+
 type SettingsCardType = {
   heading: string
   description: string
   icon?: React.ComponentType
   to: string
   feature_flag?: string
+  permissions?: UserRoles[]
 }
 
 const settings: SettingsCardType[] = [
@@ -39,30 +46,35 @@ const settings: SettingsCardType[] = [
     icon: KeyIcon,
     to: "/a/publishable-api-keys",
     feature_flag: "publishable_api_keys",
+    permissions: [UserRoles.ADMIN],
   },
   {
     heading: "Currencies",
     description: "Manage the currencies of your store",
     icon: CoinsIcon,
     to: "/a/settings/currencies",
+    permissions: [UserRoles.ADMIN],
   },
   {
     heading: "Personal Information",
-    description: "Manage your Medusa profile",
+    description: "Manage your profile",
     icon: HappyIcon,
     to: "/a/settings/personal-information",
+    permissions: [UserRoles.MEMBER, UserRoles.ADMIN],
   },
   {
     heading: "Regions",
     description: "Manage shipping, payment, and fulfillment across regions",
     icon: MapPinIcon,
     to: "/a/settings/regions",
+    permissions: [UserRoles.ADMIN],
   },
   {
     heading: "Return Reasons",
     description: "Manage resons for returned items",
     icon: ArrowUTurnLeft,
     to: "/a/settings/return-reasons",
+    permissions: [UserRoles.ADMIN],
   },
   {
     heading: "Sales Channels",
@@ -70,24 +82,28 @@ const settings: SettingsCardType[] = [
     icon: ChannelsIcon,
     feature_flag: "sales_channels",
     to: "/a/sales-channels",
+    permissions: [UserRoles.ADMIN],
   },
   {
     heading: "Store Details",
     description: "Manage your business details",
     icon: CrosshairIcon,
     to: "/a/settings/details",
+    permissions: [UserRoles.MEMBER, UserRoles.ADMIN],
   },
   {
     heading: "Taxes",
     description: "Manage taxes across regions and products",
     icon: TaxesIcon,
     to: "/a/settings/taxes",
+    permissions: [UserRoles.ADMIN],
   },
   {
     heading: "The Team",
-    description: "Manage users of your Medusa Store",
+    description: "Manage members of your store",
     icon: UsersIcon,
     to: "/a/settings/team",
+    permissions: [UserRoles.MEMBER, UserRoles.ADMIN],
   },
 ]
 
@@ -118,6 +134,9 @@ const renderCard = ({
 
 const SettingsIndex = () => {
   const { getCards } = useSettings()
+  const { user } = useAdminGetSession()
+
+  console.log({ user })
 
   const extensionCards = getCards()
 
@@ -131,7 +150,9 @@ const SettingsIndex = () => {
           </p>
         </div>
         <div className="medium:grid-cols-2 gap-y-xsmall grid grid-cols-1 gap-x-4">
-          {settings.map((s) => renderCard(s))}
+          {settings
+            .filter((s) => s.permissions?.includes(user.role))
+            .map((s) => renderCard(s))}
         </div>
       </div>
       {extensionCards.length > 0 && (

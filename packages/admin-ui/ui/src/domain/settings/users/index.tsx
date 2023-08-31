@@ -54,7 +54,7 @@ const Users: React.FC = () => {
         <BodyCard
           title="The Team"
           subtitle="Manage users of your Medusa Store"
-          actionables={actionables}
+          // actionables={actionables}
         >
           <div className="flex grow flex-col justify-between">
             <UserTable

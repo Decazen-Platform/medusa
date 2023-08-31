@@ -163,7 +163,7 @@ const RefundMenu = ({
               >
                 <div
                   className={`text-grey-0 border-grey-30 rounded-base flex h-5 w-5 justify-center border ${
-                    !noNotification && "bg-violet-60"
+                    !noNotification && "bg-orange-60"
                   }`}
                 >
                   <span className="self-center">

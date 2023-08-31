@@ -75,7 +75,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         )}
         <div
           className={clsx(
-            "focus-within:shadow-input focus-within:border-violet-60 px-small py-xsmall bg-grey-5 border-grey-20 rounded-rounded flex w-full flex-col border",
+            "focus-within:shadow-input focus-within:border-orange-60 px-small py-xsmall bg-grey-5 border-grey-20 rounded-rounded flex w-full flex-col border",
             {
               "focus-within:shadow-cta focus-within:shadow-rose-60/10 border-rose-50 focus-within:border-rose-50":
                 errors && name && errors[name],

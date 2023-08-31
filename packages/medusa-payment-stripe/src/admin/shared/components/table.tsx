@@ -4,12 +4,12 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import moment from "moment"
-import Badge from "./badge"
-import StatusIndicator from "./dot"
 import { formatAmount } from "medusa-react"
+import moment from "moment"
 import { WidgetPayment } from "../../../types"
 import LinkIcon from "../icons/link"
+import Badge from "./badge"
+import StatusIndicator from "./dot"
 
 const STRIPE_DASHBOARD_URL = "https://dashboard.stripe.com"
 
@@ -44,7 +44,7 @@ const columns: ColumnDef<WidgetPayment>[] = [
     accessorFn: (row) => row.id,
     cell: ({ row }) => {
       return (
-        <div className="text-violet-60 flex">
+        <div className="text-orange-60 flex">
           <a
             className="max-w-[100px] truncate text-blue-500"
             href={`${STRIPE_DASHBOARD_URL}/payments/${row.original.id}`}

@@ -43,12 +43,12 @@ function ListIndicator(props: ListIndicatorProps) {
       className={clsx(
         "rounded-circle flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center border bg-white",
         {
-          "border-violet-60 border-2": isActive,
+          "border-orange-60 border-2": isActive,
         }
       )}
     >
       {isActive && (
-        <div className="bg-violet-60 rounded-circle h-[10px] w-[10px]" />
+        <div className="bg-orange-60 rounded-circle h-[10px] w-[10px]" />
       )}
     </div>
   )
@@ -91,7 +91,7 @@ function SalesChannelTile(props: SalesChannelTileProps) {
       className={clsx(
         "mb-2 flex h-[83px] cursor-pointer justify-between rounded-lg border p-4",
         {
-          "border-violet-60 border-2": isSelected,
+          "border-orange-60 border-2": isSelected,
         }
       )}
     >

@@ -56,7 +56,7 @@ const AmountInput = ({
       {label && <InputHeader label={label} className="mb-xsmall" />}
       <div
         className={clsx(
-          "bg-grey-5 border-gray-20 px-base py-xsmall rounded-rounded focus-within:shadow-input focus-within:border-violet-60 inter-base-regular flex h-10 w-full items-center border",
+          "bg-grey-5 border-gray-20 px-base py-xsmall rounded-rounded focus-within:shadow-input focus-within:border-orange-60 inter-base-regular flex h-10 w-full items-center border",
           {
             "border-rose-50": errors && name && errors[name],
           }

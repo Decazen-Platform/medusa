@@ -5,11 +5,11 @@ import {
   ReturnReason,
   StockLocationDTO,
 } from "@medusajs/medusa"
-import { useAdminStockLocations } from "medusa-react"
 import {
   useAdminCreateSwap,
   useAdminOrder,
   useAdminShippingOptions,
+  useAdminStockLocations,
 } from "medusa-react"
 import React, { useContext, useEffect, useMemo, useState } from "react"
 import Spinner from "../../../../components/atoms/spinner"
@@ -419,7 +419,7 @@ const SwapMenu: React.FC<SwapMenuProps> = ({ order, onDismiss }) => {
             >
               <div
                 className={`text-grey-0 border-grey-30 rounded-base flex h-5 w-5 justify-center border ${
-                  !noNotification && "bg-violet-60"
+                  !noNotification && "bg-orange-60"
                 }`}
               >
                 <span className="self-center">

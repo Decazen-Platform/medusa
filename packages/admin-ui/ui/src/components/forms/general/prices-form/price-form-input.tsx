@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from "react"
 
+import clsx from "clsx"
 import AmountField from "react-currency-input-field"
+import { currencies } from "../../../../utils/currencies"
 import InputError from "../../../atoms/input-error"
 import InputHeader from "../../../fundamentals/input-header"
-import clsx from "clsx"
-import { currencies } from "../../../../utils/currencies"
 
 type Props = {
   currencyCode: string
@@ -64,7 +64,7 @@ const PriceFormInput = ({
       {label && <InputHeader {...{ label, required }} className="mb-xsmall" />}
       <div
         className={clsx(
-          "bg-grey-5 border-gray-20 px-small py-xsmall rounded-rounded focus-within:shadow-input focus-within:border-violet-60 flex h-10 w-full items-center border",
+          "bg-grey-5 border-gray-20 px-small py-xsmall rounded-rounded focus-within:shadow-input focus-within:border-orange-60 flex h-10 w-full items-center border",
           {
             "border-rose-50": errors && name && errors[name],
           }

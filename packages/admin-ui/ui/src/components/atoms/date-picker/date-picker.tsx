@@ -4,15 +4,15 @@ import * as PopoverPrimitive from "@radix-ui/react-popover"
 
 import React, { useEffect, useState } from "react"
 
-import ArrowDownIcon from "../../fundamentals/icons/arrow-down-icon"
-import Button from "../../fundamentals/button"
-import CustomHeader from "./custom-header"
-import { DateTimePickerProps } from "./types"
-import InputContainer from "../../fundamentals/input-container"
-import InputHeader from "../../fundamentals/input-header"
-import ReactDatePicker from "react-datepicker"
 import clsx from "clsx"
 import moment from "moment"
+import ReactDatePicker from "react-datepicker"
+import Button from "../../fundamentals/button"
+import ArrowDownIcon from "../../fundamentals/icons/arrow-down-icon"
+import InputContainer from "../../fundamentals/input-container"
+import InputHeader from "../../fundamentals/input-header"
+import CustomHeader from "./custom-header"
+import { DateTimePickerProps } from "./types"
 
 const getDateClassname = (
   d: Date,
@@ -70,7 +70,7 @@ const DatePicker: React.FC<DateTimePickerProps> = ({
         <PopoverPrimitive.Trigger asChild>
           <button
             className={clsx("rounded-rounded w-full border ", {
-              "shadow-input border-violet-60": isOpen,
+              "shadow-input border-orange-60": isOpen,
               "border-grey-20": !isOpen,
             })}
             type="button"

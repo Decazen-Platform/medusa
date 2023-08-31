@@ -279,14 +279,14 @@ module.exports = {
         large: "1464px",
       },
       boxShadow: {
-        cta: "0px 0px 0px 4px rgba(124, 58, 237, 0.1)",
+        cta: "0px 0px 0px 4px rgba(237, 164, 57, 0.1)",
         dropdown: "0px 2px 16px rgba(0, 0, 0, 0.08);",
-        input: "0px 0px 0px 4px #8B5CF61A",
+        input: "0px 0px 0px 4px #f6945c1a",
         searchModal: "0px 2px 64px 16px rgba(17, 24, 39, 0.08)",
         toaster: "0px 2px 16px rgba(17, 24, 39, 0.08)",
         border: "0px 0px 0px 1px #E5E7EB",
-        "focus-border": "0px 0px 0px 1px #7C3AED",
-        "error-border": "0px 0px 0px 1px #F43F5E",
+        "focus-border": "0px 0px 0px 1px #f6945c",
+        "error-border": "0px 0px 0px 1px #db0f32",
       },
       keyframes: {
         ring: {

@@ -96,18 +96,21 @@ const AccountDetails = () => {
                 label="Swap link template"
                 {...register("swap_link_template")}
                 placeholder="https://acme.inc/swap={swap_id}"
+                disabled
               />
               <Input
                 className="mt-base"
                 label="Draft order link template"
                 {...register("payment_link_template")}
                 placeholder="https://acme.inc/payment={payment_id}"
+                disabled
               />
               <Input
                 className="mt-base"
                 label="Invite link template"
                 {...register("invite_link_template")}
                 placeholder="https://acme-admin.inc/invite?token={invite_token}"
+                disabled
               />
             </div>
           </div>

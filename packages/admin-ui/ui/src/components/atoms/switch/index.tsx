@@ -12,7 +12,7 @@ const Switch = React.forwardRef<HTMLButtonElement, RadixSwitch.SwitchProps>(
         ref={ref}
         {...props}
         className={clsx(
-          "transition-bg radix-state-checked:bg-violet-60 h-[18px] w-8 rounded-full bg-gray-300"
+          "transition-bg radix-state-checked:bg-orange-60 h-[18px] w-8 rounded-full bg-gray-300"
         )}
       >
         <RadixSwitch.Thumb

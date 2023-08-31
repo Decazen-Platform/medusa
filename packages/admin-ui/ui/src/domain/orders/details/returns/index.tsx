@@ -6,35 +6,35 @@ import {
   LineItem as RawLineItem,
   StockLocationDTO,
 } from "@medusajs/medusa"
-import LayeredModal, {
-  LayeredModalContext,
-} from "../../../../components/molecules/modal/layered-modal"
-import React, { useContext, useEffect, useState } from "react"
 import {
   useAdminRequestReturn,
   useAdminShippingOptions,
   useAdminStockLocations,
   useMedusa,
 } from "medusa-react"
+import React, { useContext, useEffect, useState } from "react"
+import LayeredModal, {
+  LayeredModalContext,
+} from "../../../../components/molecules/modal/layered-modal"
 
+import Spinner from "../../../../components/atoms/spinner"
 import Button from "../../../../components/fundamentals/button"
 import CheckIcon from "../../../../components/fundamentals/icons/check-icon"
-import CurrencyInput from "../../../../components/organisms/currency-input"
 import EditIcon from "../../../../components/fundamentals/icons/edit-icon"
+import WarningCircleIcon from "../../../../components/fundamentals/icons/warning-circle"
 import IconTooltip from "../../../../components/molecules/icon-tooltip"
 import Modal from "../../../../components/molecules/modal"
-import { Option } from "../../../../types/shared"
-import RMASelectProductTable from "../../../../components/organisms/rma-select-product-table"
 import RMAShippingPrice from "../../../../components/molecules/rma-select-shipping"
 import Select from "../../../../components/molecules/select/next-select/select"
-import Spinner from "../../../../components/atoms/spinner"
-import WarningCircleIcon from "../../../../components/fundamentals/icons/warning-circle"
-import { displayAmount } from "../../../../utils/prices"
-import { getAllReturnableItems } from "../utils/create-filtering"
-import { getErrorMessage } from "../../../../utils/error-messages"
-import { removeFalsy } from "../../../../utils/remove-nullish"
-import { useFeatureFlag } from "../../../../providers/feature-flag-provider"
+import CurrencyInput from "../../../../components/organisms/currency-input"
+import RMASelectProductTable from "../../../../components/organisms/rma-select-product-table"
 import useNotification from "../../../../hooks/use-notification"
+import { useFeatureFlag } from "../../../../providers/feature-flag-provider"
+import { Option } from "../../../../types/shared"
+import { getErrorMessage } from "../../../../utils/error-messages"
+import { displayAmount } from "../../../../utils/prices"
+import { removeFalsy } from "../../../../utils/remove-nullish"
+import { getAllReturnableItems } from "../utils/create-filtering"
 
 type ReturnMenuProps = {
   order: Order
@@ -394,7 +394,7 @@ const ReturnMenu: React.FC<ReturnMenuProps> = ({ order, onDismiss }) => {
             >
               <div
                 className={`rounded-base border-grey-30 text-grey-0 flex h-5 w-5 justify-center border ${
-                  !noNotification && "bg-violet-60"
+                  !noNotification && "bg-orange-60"
                 }`}
               >
                 <span className="self-center">

@@ -24,7 +24,7 @@ const Spinner: React.FC<SpinnerProps> = ({
           className={clsx(
             "animate-ring rounded-circle h-4/5 w-4/5 border-2 border-transparent",
             { "border-t-grey-0": variant === "primary" },
-            { "border-t-violet-60": variant === "secondary" }
+            { "border-t-orange-60": variant === "secondary" }
           )}
         />
       </div>

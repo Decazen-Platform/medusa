@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { useMemo, useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import PlusIcon from "../../components/fundamentals/icons/plus-icon"
 import FilterDropdownContainer from "../../components/molecules/filter-dropdown/container"
 import TabFilter from "../../components/molecules/filter-tab"
@@ -67,13 +67,13 @@ const ProductsFilter = ({
         triggerElement={
           <button
             className={clsx(
-              "rounded-rounded focus-visible:shadow-input focus-visible:border-violet-60 flex items-center space-x-1 focus-visible:outline-none"
+              "rounded-rounded focus-visible:shadow-input focus-visible:border-orange-60 flex items-center space-x-1 focus-visible:outline-none"
             )}
           >
             <div className="rounded-rounded bg-grey-5 border-grey-20 inter-small-semibold flex h-6 items-center border px-2">
               Filters
               <div className="text-grey-40 ml-1 flex items-center rounded">
-                <span className="text-violet-60 inter-small-semibold">
+                <span className="text-orange-60 inter-small-semibold">
                   {numberOfFilters ? numberOfFilters : "0"}
                 </span>
               </div>

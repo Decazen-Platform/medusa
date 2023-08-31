@@ -12,7 +12,7 @@ const useTaxRateColumns = () => {
         accessor: "name",
         Cell: ({ row, cell: { value } }) => {
           return (
-            <div className="text-grey-90 group-hover:text-violet-60 pl-2">
+            <div className="text-grey-90 group-hover:text-orange-60 pl-2">
               {row.original.type === "region" ? (
                 <div className="gap-x-xsmall text-grey-40 flex items-center">
                   <LockIcon size={"12"} /> {value}

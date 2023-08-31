@@ -55,7 +55,7 @@ const Item = ({
           <RadioGroupPrimitive.Indicator
             className={clsx(
               "indicator relative flex h-full w-full items-center justify-center",
-              "after:bg-violet-60 after:rounded-circle after:absolute after:inset-0 after:m-auto after:block after:h-[12px] after:w-[12px]"
+              "after:bg-orange-60 after:rounded-circle after:absolute after:inset-0 after:m-auto after:block after:h-[12px] after:w-[12px]"
             )}
           />
           {/* Outline indicator: purely stylistical */}
@@ -63,7 +63,7 @@ const Item = ({
             //  we want to hide this indicator from screen readers because the previous one is enough
             aria-hidden="true"
             className={clsx(
-              "shadow-violet-60 rounded-rounded absolute inset-0 shadow-[0_0_0_2px]"
+              "shadow-orange-60 rounded-rounded absolute inset-0 shadow-[0_0_0_2px]"
             )}
           />
         </RadioGroupPrimitive.Item>
@@ -129,7 +129,7 @@ const SimpleItem: React.FC<RadioGroupSimpleItemProps> = ({
         <RadioGroupPrimitive.Indicator
           className={clsx(
             "indicator relative flex h-full w-full items-center justify-center",
-            "after:bg-violet-60 after:rounded-circle after:absolute after:inset-0 after:m-auto after:block after:h-[12px] after:w-[12px]"
+            "after:bg-orange-60 after:rounded-circle after:absolute after:inset-0 after:m-auto after:block after:h-[12px] after:w-[12px]"
           )}
         />
       </RadioGroupPrimitive.Item>
@@ -163,7 +163,7 @@ const Dot: React.FC<DotProps> = ({ className, ...rest }) => {
         <RadioGroupPrimitive.Indicator
           className={clsx(
             "indicator relative flex h-full w-full items-center justify-center",
-            "after:bg-violet-60 after:rounded-circle after:absolute after:inset-0 after:m-auto after:block after:h-[12px] after:w-[12px]"
+            "after:bg-orange-60 after:rounded-circle after:absolute after:inset-0 after:m-auto after:block after:h-[12px] after:w-[12px]"
           )}
         />
       </RadioGroupPrimitive.Item>

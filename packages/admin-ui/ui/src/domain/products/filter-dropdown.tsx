@@ -1,13 +1,13 @@
 import clsx from "clsx"
-import { useMemo, useEffect, useState } from "react"
-import { useAdminProductTags, useAdminCollections } from "medusa-react"
+import { useAdminCollections, useAdminProductTags } from "medusa-react"
+import { useEffect, useMemo, useState } from "react"
 import CheckIcon from "../../components/fundamentals/icons/check-icon"
 import PlusIcon from "../../components/fundamentals/icons/plus-icon"
 import FilterDropdownContainer from "../../components/molecules/filter-dropdown/container"
 import FilterDropdownItem from "../../components/molecules/filter-dropdown/item"
 import SaveFilterItem from "../../components/molecules/filter-dropdown/save-field"
-import TagInput from "../../components/molecules/tag-input"
 import TabFilter from "../../components/molecules/filter-tab"
+import TagInput from "../../components/molecules/tag-input"
 
 const statusFilters = ["proposed", "draft", "published", "rejected"]
 
@@ -109,13 +109,13 @@ const ProductsFilter = ({
         triggerElement={
           <button
             className={clsx(
-              "rounded-rounded focus-visible:shadow-input focus-visible:border-violet-60 flex items-center space-x-1 focus-visible:outline-none"
+              "rounded-rounded focus-visible:shadow-input focus-visible:border-orange-60 flex items-center space-x-1 focus-visible:outline-none"
             )}
           >
             <div className="rounded-rounded bg-grey-5 border-grey-20 inter-small-semibold flex h-6 items-center border px-2">
               Filters
               <div className="text-grey-40 ml-1 flex items-center rounded">
-                <span className="text-violet-60 inter-small-semibold">
+                <span className="text-orange-60 inter-small-semibold">
                   {numberOfFilters ? numberOfFilters : "0"}
                 </span>
               </div>
@@ -162,7 +162,7 @@ const ProductsFilter = ({
           >
             <div
               className={`border-grey-30 text-grey-0 rounded-base flex h-5 w-5 justify-center border ${
-                tempState.tags.open && "bg-violet-60"
+                tempState.tags.open && "bg-orange-60"
               }`}
             >
               <span className="self-center">

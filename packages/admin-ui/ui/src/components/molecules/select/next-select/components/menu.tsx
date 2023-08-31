@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import {
   ActionMeta,
   CX,
@@ -11,13 +12,12 @@ import {
   PropsValue,
 } from "react-select"
 import { hasPrefix, hasSuffix, optionIsDisabled } from "../utils"
-import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
+import clsx from "clsx"
 import Button from "../../../../fundamentals/button"
 import CheckIcon from "../../../../fundamentals/icons/check-icon"
 import ListArrowIcon from "../../../../fundamentals/icons/list-arrow-icon"
 import SelectPrimitives from "./select-primitives"
-import clsx from "clsx"
 
 const Menu = <
   Option,
@@ -331,7 +331,7 @@ const CheckboxAdornment = ({
       className={clsx(
         `w-base h-base text-grey-0 border-grey-30 rounded-base flex justify-center border transition-colors`,
         {
-          "bg-violet-60 border-violet-60": isSelected,
+          "bg-orange-60 border-orange-60": isSelected,
           "bg-grey-5": isDisabled,
         }
       )}

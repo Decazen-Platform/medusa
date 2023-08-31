@@ -95,7 +95,7 @@ const AnalyticsPreferencesModal = () => {
                 href="https://docs.medusajs.com/usage"
                 rel="noreferrer noopener"
                 target="_blank"
-                className="text-violet-60"
+                className="text-orange-60"
               >
                 documentation
               </a>

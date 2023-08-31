@@ -143,7 +143,7 @@ const ProductPrices = ({
             text={
               <span>
                 Drop your price list file here, or{" "}
-                <span className="text-violet-60">click to browse</span>
+                <span className="text-orange-60">click to browse</span>
               </span>
             }
           />

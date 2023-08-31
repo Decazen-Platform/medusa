@@ -1,6 +1,5 @@
 import clsx from "clsx"
 import { ReactNode, useState } from "react"
-import { useHref } from "react-router-dom"
 
 import Tooltip from "../../atoms/tooltip"
 import Button from "../../fundamentals/button"
@@ -140,7 +139,7 @@ function DropArea(props: DropAreaProps) {
     >
       <span className="text-grey-50 text-small">
         Drop your file here, or
-        <a className="text-violet-60">
+        <a className="text-orange-60">
           <label className="cursor-pointer" htmlFor="upload-form-file">
             {" "}
             click to browse.

@@ -62,7 +62,7 @@ const IndeterminateCheckbox = React.forwardRef<
             ? checked
               ? "bg-gray-300"
               : ""
-            : checked && "bg-violet-60"
+            : checked && "bg-orange-60"
         }`}
       >
         <span className="self-center">

@@ -9,7 +9,7 @@ import React, {
 } from "react"
 import AmountField from "react-currency-input-field"
 import { Option } from "../../../types/shared"
-import { currencies, CurrencyType } from "../../../utils/currencies"
+import { CurrencyType, currencies } from "../../../utils/currencies"
 import { normalizeAmount, persistedPrice } from "../../../utils/prices"
 import InputError from "../../atoms/input-error"
 import Tooltip from "../../atoms/tooltip"
@@ -239,7 +239,7 @@ const Amount = forwardRef<HTMLInputElement, AmountInputProps>(
         <InputHeader label={label} required={required} className="mb-xsmall" />
         <div
           className={clsx(
-            "bg-grey-5 border-gray-20 px-small py-xsmall rounded-rounded focus-within:shadow-input focus-within:border-violet-60 flex h-10 w-full items-center border",
+            "bg-grey-5 border-gray-20 px-small py-xsmall rounded-rounded focus-within:shadow-input focus-within:border-orange-60 flex h-10 w-full items-center border",
             {
               "focus-within:shadow-cta focus-within:shadow-rose-60/10 border-rose-50 focus-within:border-rose-50":
                 errors && name && errors[name],

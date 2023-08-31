@@ -13,9 +13,9 @@ const PublicLayout = ({ children }: PropsWithChildren) => {
         }}
         position="bottom-right"
       />
-      <div className="mb-large">
+      {/* <div className="mb-large">
         <Logo />
-      </div>
+      </div> */}
       {children}
     </div>
   )

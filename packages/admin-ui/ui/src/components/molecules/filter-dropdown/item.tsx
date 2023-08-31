@@ -1,18 +1,18 @@
 import * as RadixCollapsible from "@radix-ui/react-collapsible"
 import * as RadixPopover from "@radix-ui/react-popover"
 
-import { addHours, atMidnight, dateToUnixTimestamp } from "../../../utils/time"
 import { useEffect, useMemo, useState } from "react"
+import { addHours, atMidnight, dateToUnixTimestamp } from "../../../utils/time"
 
-import ArrowRightIcon from "../../fundamentals/icons/arrow-right-icon"
-import { CalendarComponent } from "../../atoms/date-picker/date-picker"
-import CheckIcon from "../../fundamentals/icons/check-icon"
-import ChevronUpIcon from "../../fundamentals/icons/chevron-up"
-import { DateFilters } from "../../../utils/filters"
-import InputField from "../input"
-import Spinner from "../../atoms/spinner"
 import clsx from "clsx"
 import moment from "moment"
+import { DateFilters } from "../../../utils/filters"
+import { CalendarComponent } from "../../atoms/date-picker/date-picker"
+import Spinner from "../../atoms/spinner"
+import ArrowRightIcon from "../../fundamentals/icons/arrow-right-icon"
+import CheckIcon from "../../fundamentals/icons/check-icon"
+import ChevronUpIcon from "../../fundamentals/icons/chevron-up"
+import InputField from "../input"
 
 const DAY_IN_SECONDS = 86400
 
@@ -108,7 +108,7 @@ const FilterDropdownItem = ({
           <div className="flex items-center">
             <div
               className={`text-grey-0 border-grey-30 rounded-base flex h-5 w-5 justify-center border ${
-                open && "bg-violet-60"
+                open && "bg-orange-60"
               }`}
             >
               <span className="self-center">
@@ -135,7 +135,7 @@ const FilterDropdownItem = ({
             <div className="flex py-2 pl-6">
               <button
                 onClick={handlePrev}
-                className="hover:text-violet-60 text-grey-90 font-semibold"
+                className="hover:text-orange-60 text-grey-90 font-semibold"
               >
                 Back
               </button>
@@ -180,7 +180,7 @@ const FilterDropdownItem = ({
                 >
                   <div
                     className={`text-grey-0 border-grey-30 rounded-base mr-2 flex h-5 w-5 justify-center border ${
-                      checked[value] === true && "bg-violet-60"
+                      checked[value] === true && "bg-orange-60"
                     }`}
                   >
                     <span className="self-center">
@@ -206,7 +206,7 @@ const FilterDropdownItem = ({
             <div className="flex py-2 pl-6">
               <button
                 onClick={handleNext}
-                className="hover:text-violet-60 text-grey-90 font-semibold"
+                className="hover:text-orange-60 text-grey-90 font-semibold"
               >
                 Show more
               </button>
@@ -519,13 +519,13 @@ const PopoverOptions = ({ options, onClick, selectedItem }) => {
             className={clsx(
               "mr-2 flex h-4 w-4 items-center justify-center rounded-full",
               {
-                "border-violet-60 border-2": item === selectedItem,
+                "border-orange-60 border-2": item === selectedItem,
                 "border-grey-30 border ": item !== selectedItem,
               }
             )}
           >
             {item === selectedItem && (
-              <div className="bg-violet-60 h-2 w-2 rounded-full" />
+              <div className="bg-orange-60 h-2 w-2 rounded-full" />
             )}
           </div>
           {item}

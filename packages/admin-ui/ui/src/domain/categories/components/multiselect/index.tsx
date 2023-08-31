@@ -76,7 +76,7 @@ function Input(props: InputProps) {
     <div
       onClick={openPopup}
       className={clsx(
-        "rounded-rounded border-grey-20 bg-grey-5 px-small focus-within:border-violet-60 focus-within:shadow-cta flex h-10 items-center justify-between border",
+        "rounded-rounded border-grey-20 bg-grey-5 px-small focus-within:border-orange-60 focus-within:shadow-cta flex h-10 items-center justify-between border",
         { "opacity-50": disabled },
         { "pointer-events-none": disabled }
       )}
@@ -126,7 +126,7 @@ const Checkbox = ({ isSelected }: CheckboxProps) => {
       className={clsx(
         `rounded-base border-grey-30 text-grey-0 flex h-5 w-5 justify-center border`,
         {
-          "bg-violet-60": isSelected,
+          "bg-orange-60": isSelected,
         }
       )}
     >

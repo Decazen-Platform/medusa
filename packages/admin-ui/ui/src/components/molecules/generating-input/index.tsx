@@ -60,7 +60,7 @@ const GeneratingInput = React.forwardRef(
           {!value && (
             <button
               onClick={generateCode}
-              className="inter-small-semibold text-violet-50"
+              className="inter-small-semibold text-orange-50"
             >
               Generate
             </button>

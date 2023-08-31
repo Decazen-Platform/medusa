@@ -3,7 +3,7 @@ import IconProps from "../types/icon-type"
 
 const MedusaIcon: React.FC<IconProps> = ({
   size = "48",
-  color = "#8B5CF6",
+  color = "#f6945c",
   ...attributes
 }) => {
   const width = +size * 0.9375 // width relative to height (from size prop)

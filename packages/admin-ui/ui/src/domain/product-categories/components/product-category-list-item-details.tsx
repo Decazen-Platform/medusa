@@ -1,23 +1,23 @@
-import React, { useContext } from "react"
 import clsx from "clsx"
+import React, { useContext } from "react"
 
 import { ProductCategory } from "@medusajs/medusa"
 import { useAdminDeleteProductCategory } from "medusa-react"
 
-import { ProductCategoriesContext } from "../pages"
 import Tooltip from "../../../components/atoms/tooltip"
 import Button from "../../../components/fundamentals/button"
+import EditIcon from "../../../components/fundamentals/icons/edit-icon"
+import EyeOffIcon from "../../../components/fundamentals/icons/eye-off-icon"
+import FolderOpenIcon from "../../../components/fundamentals/icons/folder-open-icon"
+import MoreHorizontalIcon from "../../../components/fundamentals/icons/more-horizontal-icon"
+import PlusIcon from "../../../components/fundamentals/icons/plus-icon"
+import TagDotIcon from "../../../components/fundamentals/icons/tag-dot-icon"
+import TagIcon from "../../../components/fundamentals/icons/tag-icon"
+import TrashIcon from "../../../components/fundamentals/icons/trash-icon"
 import Actionables from "../../../components/molecules/actionables"
 import TooltipIcon from "../../../components/molecules/tooltip-icon"
-import TrashIcon from "../../../components/fundamentals/icons/trash-icon"
-import EditIcon from "../../../components/fundamentals/icons/edit-icon"
-import PlusIcon from "../../../components/fundamentals/icons/plus-icon"
-import FolderOpenIcon from "../../../components/fundamentals/icons/folder-open-icon"
-import TagIcon from "../../../components/fundamentals/icons/tag-icon"
-import TagDotIcon from "../../../components/fundamentals/icons/tag-dot-icon"
-import EyeOffIcon from "../../../components/fundamentals/icons/eye-off-icon"
-import MoreHorizontalIcon from "../../../components/fundamentals/icons/more-horizontal-icon"
 import useNotification from "../../../hooks/use-notification"
+import { ProductCategoriesContext } from "../pages"
 
 type ProductCategoryListItemDetailsProps = {
   depth: number
@@ -146,7 +146,7 @@ function ProductCategoryListItemDetails(
                 <Button
                   size="small"
                   variant="ghost"
-                  className="h-xlarge w-xlarge focus-visible:border-violet-60 focus-visible:shadow-input focus:shadow-none focus-visible:outline-none"
+                  className="h-xlarge w-xlarge focus-visible:border-orange-60 focus-visible:shadow-input focus:shadow-none focus-visible:outline-none"
                 >
                   <MoreHorizontalIcon color="#687076" size={20} />
                 </Button>

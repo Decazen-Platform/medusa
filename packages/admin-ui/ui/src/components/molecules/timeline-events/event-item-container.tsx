@@ -35,7 +35,7 @@ const EventItemContainer: React.FC<EventItemContainerProps> = ({
         <div className="inter-small-regular flex w-full flex-col">
           <div className="flex w-full items-center justify-between">
             <p>{item.title}</p>
-            <span className="inter-small-semibold text-violet-60">{`x${item.quantity}`}</span>
+            <span className="inter-small-semibold text-orange-60">{`x${item.quantity}`}</span>
           </div>
           <p className="text-grey-50">{item.variant.title}</p>
         </div>

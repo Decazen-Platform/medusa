@@ -25,7 +25,7 @@ const InputContainer: React.FC<InputContainerProps> = ({
         }
       }}
       className={clsx([
-        `bg-grey-5 inter-base-regular h-18 border-grey-20 focus-within:shadow-input focus-within:border-violet-60 rounded-rounded flex w-full cursor-text flex-col border p-3`,
+        `bg-grey-5 inter-base-regular h-18 border-grey-20 focus-within:shadow-input focus-within:border-orange-60 rounded-rounded flex w-full cursor-text flex-col border p-3`,
         className,
       ])}
     >

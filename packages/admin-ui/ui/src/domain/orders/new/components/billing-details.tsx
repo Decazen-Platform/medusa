@@ -50,7 +50,7 @@ const Billing = () => {
         >
           <div
             className={`text-grey-0 border-grey-30 rounded-base flex h-5 w-5 justify-center border ${
-              sameAsShipping && "bg-violet-60"
+              sameAsShipping && "bg-orange-60"
             }`}
           >
             <span className="self-center">
