@@ -1,18 +1,24 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "medusajs/medusa" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "Decazen-Platform/medusa" }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],
-  "access": "public",
+  "access": "private",
   "baseBranch": "develop",
   "updateInternalDependencies": "patch",
-  "ignore": ["integration-tests-api", "integration-tests-plugins", "integration-tests-repositories"],
+  "ignore": [
+    "integration-tests-api",
+    "integration-tests-plugins",
+    "integration-tests-repositories"
+  ],
   "snapshot": {
     "useCalculatedVersion": true
   },
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   }
-
 }

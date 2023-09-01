@@ -1,8 +1,6 @@
 import React, { useCallback, useState, type MouseEvent } from "react"
 import useToggleState from "../../../hooks/use-toggle-state"
 import { usePolling } from "../../../providers/polling-provider"
-import Button from "../../fundamentals/button"
-import HelpCircleIcon from "../../fundamentals/icons/help-circle"
 import NotificationBell from "../../molecules/notification-bell"
 import SearchBar from "../../molecules/search-bar"
 import ActivityDrawer from "../activity-drawer"
@@ -31,14 +29,14 @@ const Topbar: React.FC = () => {
     <div className="min-h-topbar max-h-topbar pr-xlarge pl-base bg-grey-0 border-grey-20 sticky top-0 z-40 flex w-full items-center justify-between border-b">
       <SearchBar />
       <div className="flex items-center">
-        <Button
+        {/* <Button
           size="small"
           variant="ghost"
           className="mr-3 h-8 w-8"
           onClick={() => setShowSupportForm(!showSupportform)}
         >
           <HelpCircleIcon size={24} />
-        </Button>
+        </Button> */}
 
         <NotificationBell
           onClick={onNotificationBellClick}

@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa.git",
+    "url": "https://github.com/Decazen-Platform/medusa.git",
     "directory": "packages/admin"
   },
   "dependencies": {
