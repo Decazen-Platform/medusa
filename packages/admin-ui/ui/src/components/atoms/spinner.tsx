@@ -4,6 +4,7 @@ import React from "react"
 export type SpinnerProps = {
   size?: "large" | "medium" | "small"
   variant?: "primary" | "secondary"
+  message?: string
 }
 
 const Spinner: React.FC<SpinnerProps> = ({
@@ -14,8 +15,8 @@ const Spinner: React.FC<SpinnerProps> = ({
     <div
       className={clsx(
         "flex items-center justify-center",
-        { "h-[24px] w-[24px]": size === "large" },
-        { "h-[20px] w-[20px]": size === "medium" },
+        { "h-[32px] w-[32px]": size === "large" },
+        { "h-[24px] w-[24px]": size === "medium" },
         { "h-[16px] w-[16px]": size === "small" }
       )}
     >
